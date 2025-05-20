@@ -1,4 +1,4 @@
-# 🛸 Drone Simulation with ArduPilot, MAVProxy, and Gazebo Harmonic
+#  Drone Simulation with ArduPilot, MAVProxy, and Gazebo Harmonic
 
 This repository contains the files and documentation for setting up a drone simulation environment using **ArduPilot SITL**, **MAVProxy**, **Gazebo Harmonic**, and **QGroundControl**. The simulation includes basic drone flight and waypoint navigation using QGroundControl.
 
