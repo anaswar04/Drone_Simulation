@@ -2,7 +2,7 @@
 
 This repository contains the files and documentation for setting up a drone simulation environment using **ArduPilot SITL**, **MAVProxy**, **Gazebo Harmonic**, and **QGroundControl**. The simulation includes basic drone flight and waypoint navigation using QGroundControl.
 
-## 📖 What This Repo Is About
+##  What This Repo Is About
 
 This project demonstrates:
 - Installing and running **ArduPilot SITL (Software-In-The-Loop)** for drone simulation
