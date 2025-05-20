@@ -23,6 +23,9 @@ chmod +x QGroundControl.AppImage
 ./QGroundControl.AppImage
 ```
 
+You can also download the latest version from the official site:
+https://docs.qgroundcontrol.com/master/en/getting_started/download_and_install.html
+
 ## How to Run QGroundControl with SITL using ArduPilot
 1. Run SITL with MAVProxy:
 ```bash
