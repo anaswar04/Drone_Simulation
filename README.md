@@ -11,3 +11,33 @@ This project demonstrates:
 - Running basic waypoint navigation using QGroundControl + ArduPilot SITL
 
 ---
+## How to Install QGroundControl
+```bash
+# Download AppImage (64-bit Linux)
+wget https://d176tv9ibo4jno.cloudfront.net/latest/QGroundControl.AppImage
+
+# Make it executable
+chmod +x QGroundControl.AppImage
+
+# Run it
+./QGroundControl.AppImage
+```
+
+## How to Run QGroundControl with SITL using ArduPilot
+1. Run SITL with MAVProxy:
+```bash
+cd ardupilot/ArduCopter
+sim_vehicle.py -v ArduCopter -f gazebo-iris --console --map
+
+```
+2. Launch QGroundControl:
+```bash
+./QGroundControl.AppImage
+```
+note: this must be used from directory where it is downloaded usually `/home/(name)/Downloads/`
+
+3. QGroundControl will automatically connect via UDP on port 14550. You should see the simulated drone appear on the map. You can now use QGroundControl to send commands, upload waypoints, and monitor the drone state in real-time.
+
+## License
+
+This project is open-source and licensed under the MIT License.
