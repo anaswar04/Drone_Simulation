@@ -40,3 +40,6 @@ sim_vehicle.py -v ArduCopter -f gazebo-iris --console --map
 note: this must be used from directory where it is downloaded usually `/home/(name)/Downloads/`
 
 3. QGroundControl will automatically connect via UDP on port 14550. You should see the simulated drone appear on the map. You can now use QGroundControl to send commands, upload waypoints, and monitor the drone state in real-time.
+
+working demo 
+https://www.youtube.com/watch?v=09Z5kr5EHag
