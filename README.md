@@ -43,3 +43,94 @@ note: this must be used from directory where it is downloaded usually `/home/(na
 
 working demo 
 https://www.youtube.com/watch?v=09Z5kr5EHag
+
+
+# ArduPilot + Gazebo + MAVROS (ROS 2) Quick Start
+
+This guide walks you through running ArduCopter (Iris) simulation in Gazebo, connecting with MAVROS (ROS 2), and sending basic commands.
+
+---
+
+## 1. Run Gazebo
+
+```bash
+gz sim -v4 -r iris_runway.sdf
+```
+
+---
+
+## 2. Start ArduPilot SITL
+
+_Navigate to your ArduPilot directory and run:_
+```bash
+
+sim_vehicle.py -v ArduCopter -f gazebo-iris --model JSON --map --console
+```
+
+---
+
+## 3. Check MAVROS State (in another terminal)
+
+```bash
+ros2 topic echo /mavros/state
+```
+
+
+---
+
+## 4. Connect MAVROS (in another terminal)
+```bash
+ros2 run mavros mavros_node --ros-args -p fcu_url:=udp://:14550@localhost:14550
+```
+
+
+---
+
+## 5. Set Mode, Arm, and Takeoff (in another terminal)
+
+_Set flight mode to GUIDED:_
+```bash
+ros2 service call /mavros/set_mode mavros_msgs/srv/SetMode "{base_mode: 0, custom_mode: 'GUIDED'}"
+```
+
+_Arm the vehicle:_
+```bash
+ros2 service call /mavros/cmd/arming mavros_msgs/srv/CommandBool "{value: true}"
+```
+
+
+_Take off to 5 meters altitude:_
+```bash
+ros2 service call /mavros/cmd/takeoff mavros_msgs/srv/CommandTOL "{altitude: 5.0}"
+```
+
+
+---
+
+## 6. Move Forward Continuously
+
+_To move forward at 1 m/s, publish at 10 Hz:_
+```bash
+ros2 topic pub -r 10 /mavros/setpoint_velocity/cmd_vel geometry_msgs/msg/TwistStamped "{twist: {linear: {x: 1.0, y: 0.0, z: 0.0}}}"
+```
+
+
+---
+
+## 7. Stop the Vehicle
+
+_To stop, publish zeros:_
+```bash
+ros2 topic pub /mavros/setpoint_velocity/cmd_vel geometry_msgs/msg/TwistStamped "{twist: {linear: {x: 0.0, y: 0.0, z: 0.0}}}"
+```
+
+
+---
+
+## Notes
+
+- Use a new terminal for each major step as indicated.
+- Ensure all dependencies (Gazebo, ArduPilot, MAVROS, ROS 2) are installed and sourced.
+- Adjust file/model names as needed for your setup.
+
+---
