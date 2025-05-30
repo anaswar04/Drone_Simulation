@@ -1,0 +1,2 @@
+[console_scripts]
+pose_to_tf_broadcaster = drone.pose_to_tf_broadcaster:main

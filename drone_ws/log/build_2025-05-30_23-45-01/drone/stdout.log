@@ -1,0 +1,35 @@
+running egg_info
+creating ../../build/drone/drone.egg-info
+writing ../../build/drone/drone.egg-info/PKG-INFO
+writing dependency_links to ../../build/drone/drone.egg-info/dependency_links.txt
+writing entry points to ../../build/drone/drone.egg-info/entry_points.txt
+writing requirements to ../../build/drone/drone.egg-info/requires.txt
+writing top-level names to ../../build/drone/drone.egg-info/top_level.txt
+writing manifest file '../../build/drone/drone.egg-info/SOURCES.txt'
+reading manifest file '../../build/drone/drone.egg-info/SOURCES.txt'
+writing manifest file '../../build/drone/drone.egg-info/SOURCES.txt'
+running build
+running build_py
+creating /home/dheeraj/drone_ws/build/drone/build/lib/drone
+copying drone/pose_to_tf_broadcaster.py -> /home/dheeraj/drone_ws/build/drone/build/lib/drone
+copying drone/__init__.py -> /home/dheeraj/drone_ws/build/drone/build/lib/drone
+running install
+running install_lib
+creating /home/dheeraj/drone_ws/install/drone/lib/python3.10/site-packages/drone
+copying /home/dheeraj/drone_ws/build/drone/build/lib/drone/pose_to_tf_broadcaster.py -> /home/dheeraj/drone_ws/install/drone/lib/python3.10/site-packages/drone
+copying /home/dheeraj/drone_ws/build/drone/build/lib/drone/__init__.py -> /home/dheeraj/drone_ws/install/drone/lib/python3.10/site-packages/drone
+byte-compiling /home/dheeraj/drone_ws/install/drone/lib/python3.10/site-packages/drone/pose_to_tf_broadcaster.py to pose_to_tf_broadcaster.cpython-310.pyc
+byte-compiling /home/dheeraj/drone_ws/install/drone/lib/python3.10/site-packages/drone/__init__.py to __init__.cpython-310.pyc
+running install_data
+creating /home/dheeraj/drone_ws/install/drone/share/ament_index/resource_index/packages
+copying resource/drone -> /home/dheeraj/drone_ws/install/drone/share/ament_index/resource_index/packages
+copying package.xml -> /home/dheeraj/drone_ws/install/drone/share/drone
+creating /home/dheeraj/drone_ws/install/drone/share/drone/launch
+copying launch/robot_launch.py -> /home/dheeraj/drone_ws/install/drone/share/drone/launch
+creating /home/dheeraj/drone_ws/install/drone/share/drone/urdf
+copying urdf/my_robot.urdf -> /home/dheeraj/drone_ws/install/drone/share/drone/urdf
+running install_egg_info
+Copying ../../build/drone/drone.egg-info to /home/dheeraj/drone_ws/install/drone/lib/python3.10/site-packages/drone-0.0.0-py3.10.egg-info
+running install_scripts
+Installing pose_to_tf_broadcaster script to /home/dheeraj/drone_ws/install/drone/lib/drone
+writing list of installed files to '/home/dheeraj/drone_ws/build/drone/install.log'

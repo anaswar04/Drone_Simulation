@@ -1,0 +1,8 @@
+[0.333s] Invoking command in '/home/dheeraj/drone_ws/build/drone': PYTHONPATH=/home/dheeraj/drone_ws/build/drone/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/dheeraj/drone_ws/install/drone/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py develop --editable --build-directory /home/dheeraj/drone_ws/build/drone/build --no-deps symlink_data
+[0.443s] usage: setup.py [global_opts] cmd1 [cmd1_opts] [cmd2 [cmd2_opts] ...]
+[0.443s]    or: setup.py --help [cmd1 cmd2 ...]
+[0.443s]    or: setup.py --help-commands
+[0.443s]    or: setup.py cmd --help
+[0.443s] 
+[0.443s] error: option --editable not recognized
+[0.455s] Invoked command in '/home/dheeraj/drone_ws/build/drone' returned '1': PYTHONPATH=/home/dheeraj/drone_ws/build/drone/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/dheeraj/drone_ws/install/drone/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py develop --editable --build-directory /home/dheeraj/drone_ws/build/drone/build --no-deps symlink_data

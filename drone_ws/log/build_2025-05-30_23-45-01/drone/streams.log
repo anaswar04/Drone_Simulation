@@ -1,0 +1,37 @@
+[0.305s] Invoking command in '/home/dheeraj/drone_ws/src/drone': PYTHONPATH=/home/dheeraj/drone_ws/build/drone/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/dheeraj/drone_ws/install/drone/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/drone build --build-base /home/dheeraj/drone_ws/build/drone/build install --record /home/dheeraj/drone_ws/build/drone/install.log --single-version-externally-managed install_data
+[0.432s] running egg_info
+[0.439s] creating ../../build/drone/drone.egg-info
+[0.439s] writing ../../build/drone/drone.egg-info/PKG-INFO
+[0.439s] writing dependency_links to ../../build/drone/drone.egg-info/dependency_links.txt
+[0.439s] writing entry points to ../../build/drone/drone.egg-info/entry_points.txt
+[0.440s] writing requirements to ../../build/drone/drone.egg-info/requires.txt
+[0.440s] writing top-level names to ../../build/drone/drone.egg-info/top_level.txt
+[0.440s] writing manifest file '../../build/drone/drone.egg-info/SOURCES.txt'
+[0.454s] reading manifest file '../../build/drone/drone.egg-info/SOURCES.txt'
+[0.455s] writing manifest file '../../build/drone/drone.egg-info/SOURCES.txt'
+[0.455s] running build
+[0.455s] running build_py
+[0.455s] creating /home/dheeraj/drone_ws/build/drone/build/lib/drone
+[0.455s] copying drone/pose_to_tf_broadcaster.py -> /home/dheeraj/drone_ws/build/drone/build/lib/drone
+[0.455s] copying drone/__init__.py -> /home/dheeraj/drone_ws/build/drone/build/lib/drone
+[0.455s] running install
+[0.458s] running install_lib
+[0.465s] creating /home/dheeraj/drone_ws/install/drone/lib/python3.10/site-packages/drone
+[0.465s] copying /home/dheeraj/drone_ws/build/drone/build/lib/drone/pose_to_tf_broadcaster.py -> /home/dheeraj/drone_ws/install/drone/lib/python3.10/site-packages/drone
+[0.465s] copying /home/dheeraj/drone_ws/build/drone/build/lib/drone/__init__.py -> /home/dheeraj/drone_ws/install/drone/lib/python3.10/site-packages/drone
+[0.465s] byte-compiling /home/dheeraj/drone_ws/install/drone/lib/python3.10/site-packages/drone/pose_to_tf_broadcaster.py to pose_to_tf_broadcaster.cpython-310.pyc
+[0.465s] byte-compiling /home/dheeraj/drone_ws/install/drone/lib/python3.10/site-packages/drone/__init__.py to __init__.cpython-310.pyc
+[0.465s] running install_data
+[0.466s] creating /home/dheeraj/drone_ws/install/drone/share/ament_index/resource_index/packages
+[0.466s] copying resource/drone -> /home/dheeraj/drone_ws/install/drone/share/ament_index/resource_index/packages
+[0.466s] copying package.xml -> /home/dheeraj/drone_ws/install/drone/share/drone
+[0.466s] creating /home/dheeraj/drone_ws/install/drone/share/drone/launch
+[0.466s] copying launch/robot_launch.py -> /home/dheeraj/drone_ws/install/drone/share/drone/launch
+[0.466s] creating /home/dheeraj/drone_ws/install/drone/share/drone/urdf
+[0.466s] copying urdf/my_robot.urdf -> /home/dheeraj/drone_ws/install/drone/share/drone/urdf
+[0.466s] running install_egg_info
+[0.474s] Copying ../../build/drone/drone.egg-info to /home/dheeraj/drone_ws/install/drone/lib/python3.10/site-packages/drone-0.0.0-py3.10.egg-info
+[0.474s] running install_scripts
+[0.489s] Installing pose_to_tf_broadcaster script to /home/dheeraj/drone_ws/install/drone/lib/drone
+[0.489s] writing list of installed files to '/home/dheeraj/drone_ws/build/drone/install.log'
+[0.500s] Invoked command in '/home/dheeraj/drone_ws/src/drone' returned '0': PYTHONPATH=/home/dheeraj/drone_ws/build/drone/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/dheeraj/drone_ws/install/drone/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/drone build --build-base /home/dheeraj/drone_ws/build/drone/build install --record /home/dheeraj/drone_ws/build/drone/install.log --single-version-externally-managed install_data
