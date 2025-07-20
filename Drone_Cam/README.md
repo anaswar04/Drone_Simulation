@@ -1,5 +1,5 @@
 ## Drone Camera topic
----
+
 Following is the code to get ros2 camera topic:
 ```bash
 gz topic -i -t /world/iris_runway/model/iris_with_gimbal/model/gimbal/link/pitch_link/sensor/camera/image
