@@ -180,7 +180,6 @@ ros2 launch drone robot_launch.py
    - Select RobotModel.
    - In the *Description Topic*, select /robot_description.
 You should see a red box appear in RViz, which mimics the drone in Gazebo.
----
 
 ## 7. Drone Camera topic
 To see image from camera, run the following command 
