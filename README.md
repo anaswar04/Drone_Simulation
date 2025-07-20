@@ -172,49 +172,48 @@ ros2 run mavros mavros_node --ros-args -p fcu_url:=udp://:14550@localhost:14550
 ```
 
 5. Launch the RViz integration:
-```bash
-ros2 launch my_drone_pkg drone_rviz.launch.py
-```
-The launch file starts `pose_to_tf_broadcaster` custom node that reads from `/mavros/local_position/pose` and broadcasts TF from map → base_link.
-The `robot\_state\_publisher` node is responsible for publishing the robot model's transform data to the TF tree based on the `robot\_description` parameter, which typically references a URDF file. 
+``markdown
+# Drone Simulation and Visualization using ROS 2 and RViz
 
-This setup allows RViz2 to correctly visualize the robot's structure and movement within the defined coordinate frames. To reflect the actual drone motion simulated via MAVROS, a custom ROS 2 node subscribes to the `/mavros/local\_position/pose` topic, which provides the drone’s pose in the form of `geometry\_msgs/PoseStamped` messages. The node then converts this pose data into a TF transform and broadcasts it from the map frame to the `base\_link` frame using `tf2\_ros`.TransformBroadcaster. 
+This explains how to build and launch a drone simulation package and visualize the drone model in RViz using ROS 2.
 
-Importantly, the node is configured with a QoS profile set to SensorData (BestEffort + Volatile), ensuring compatibility with MAVROS’s publisher settings. This mechanism is essential for bridging the drone’s position output from MAVROS into the TF system so that RViz can interpret and display the drone’s real-time movement accurately.This is essential to bridge the position output from MAVROS into TF for RViz to interpret.
+---
 
-6. Runnning a robot_state_publisher
-```bash
-ros2 run robot_state_publisher robot_state_publisher --ros-args -p robot_description:="$(cat {location-to-the-urdf-file}urdf/my_robot.urdf)"
-```
+## Building the Workspace
 
-The `robot\_state\_publisher` node is used to publish the kinematic transform tree derived from the drone’s URDF model. This model is loaded by passing the contents of the URDF file to the `robot\_description` parameter, typically using a command like `ros2 run robot\_state\_publisher robot\_state\_publisher --ros-args -p robot\_description:="\$(cat urdf/my\_robot.urdf)"`. The node establishes the `base\_link` frame as the root of the model, which aligns with the TF transform being broadcast by the pose-to-TF node. This alignment ensures that RViz can correctly anchor and render the drone's model in the visual space.
+Open a terminal and run the following commands:
 
-In RViz, the fixed frame is set to map, which acts as the global reference frame. Visual elements such as the TF tree and the RobotModel can be added to the scene. With this setup, the drone model appears in RViz and follows the real-time motion data being streamed through TF, allowing accurate visualization of the drone’s movements as simulated by MAVROS.
+bash
+cd ~/drone_ws
+colcon build
+source ~/drone_ws/install/setup.bash
 
-7. Setting up RViz
-In RViz:
 
-   - Set the Fixed Frame to map.
-   - Add the following displays:
-        - TF: To view the full transform tree.
-        - RobotModel: To render the URDF-based model of the drone.
+---
 
-This setup allows real-time visualization of the drone's model and pose in the 3D space.
+## 🚀 Launch the Drone
 
-### Verification
+Run the following command to launch the drone:
 
-Check TF broadcast:
-```bash
-ros2 topic echo /tf
-```
+bash
+ros2 launch drone robot_launch.py
 
-You should see transforms like:
 
-```bash
-header:
-  |-frame_id: map
-child_frame_id: base_link
-transform:
-  |-translation: {x: ..., y: ..., z: ...}
-  |-rotation: {x: ..., y: ..., z: ..., w: ...}
-```
+
+## 👀 Visualize in RViz
+
+1. Open a new terminal and run:
+
+   bash
+   rviz2
+   
+
+2. In the RViz window:
+   - Click Add.
+   - Select RobotModel.
+   - In the *Description Topic*, select /robot_description.
+
+You should see a red box appear in RViz, which mimics the drone in Gazebo.
+---
+
+
