@@ -182,4 +182,26 @@ ros2 launch drone robot_launch.py
 You should see a red box appear in RViz, which mimics the drone in Gazebo.
 ---
 
+## 7. Drone Camera topic
+To see image from camera, run the following command 
+```bash
+ros2 run ros_gz_bridge parameter_bridge \
+/world/iris_runway/model/iris_with_gimbal/model/gimbal/link/pitch_link/sensor/camera/image@sensor_msgs/msg/Image[gz.msgs.Image
+```
 
+then we can use `rqt_image_viewer` to view the topic
+```bash
+ros2 run rqt_image_view rqt_image_view
+```
+
+We can also view this in Rviz. To open Rviz follow the below command
+```bash
+rviz2
+```
+Inside Rviz click on `Add` then Select image and then select the topic
+```bash  
+/world/iris_runway/model/iris_with_gimbal/model/gimbal/link/pitch_link/sensor/camera/image
+```
+
+from the drop down menu 
+you will be able to see the image from the cam
