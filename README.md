@@ -25,7 +25,7 @@ chmod +x QGroundControl.AppImage
 You can also download the latest version from the official site:
 https://docs.qgroundcontrol.com/master/en/getting_started/download_and_install.html
 
-## 3. How to Install the required SOftares
+## 3. Installing the required Softwares
 To installing Ardupilot SITL:
 
 [Downloading the Code / Using Git — Dev  documentation](https://ardupilot.org/dev/docs/where-to-get-the-code.html)
