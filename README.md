@@ -149,44 +149,31 @@ drone_ws/
 │       │   └── my_robot.urdf
 │       └── ...
 ```
-### How to Run
 
-Launch the RViz integration:
-``markdown
-# Drone Simulation and Visualization using ROS 2 and RViz
-
-This explains how to build and launch a drone simulation package and visualize the drone model in RViz using ROS 2.
-
----
 
 ## Building the Workspace
-
 Open a terminal and run the following commands:
 
-bash
+```bash
 cd ~/drone_ws
 colcon build
 source ~/drone_ws/install/setup.bash
+```
 
-
----
-
-## 🚀 Launch the Drone
-
+###Launch the Drone
 Run the following command to launch the drone:
 
-bash
+```bash
 ros2 launch drone robot_launch.py
+```
 
-
-
-## 👀 Visualize in RViz
+### Visualize in RViz
 
 1. Open a new terminal and run:
 
-   bash
+   ```bash
    rviz2
-   
+   ```
 
 2. In the RViz window:
    - Click Add.
