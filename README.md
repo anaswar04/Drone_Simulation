@@ -151,27 +151,7 @@ drone_ws/
 ```
 ### How to Run
 
-1. Launch ArduPilot
-```bash
-sim_vehicle.py -v ArduCopter -f gazebo-iris --model JSON --map --console
-```
-2. Start Gazebo Simulation
-```bash
-gz sim -v4 -r iris_runway.sdf
-```
-
-3. Source workspace:
-```bash
-cd ~/drone_ws
-source install/setup.bash
-```
-
-4. Start MAVROS :
-```bash
-ros2 run mavros mavros_node --ros-args -p fcu_url:=udp://:14550@localhost:14550
-```
-
-5. Launch the RViz integration:
+Launch the RViz integration:
 ``markdown
 # Drone Simulation and Visualization using ROS 2 and RViz
 
