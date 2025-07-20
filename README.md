@@ -25,7 +25,24 @@ chmod +x QGroundControl.AppImage
 You can also download the latest version from the official site:
 https://docs.qgroundcontrol.com/master/en/getting_started/download_and_install.html
 
-## 3. How to Run QGroundControl with SITL using ArduPilot
+## 3. How to Install the required SOftares
+To installing Ardupilot SITL:
+
+[Downloading the Code / Using Git — Dev  documentation](https://ardupilot.org/dev/docs/where-to-get-the-code.html)
+
+For Ardupilot gazebo plugin:
+
+https://github.com/ArduPilot/ardupilot_gazebo/blob/685e3e3d10c0ba33324df2b81474f9ed5c01289f/README.md
+
+For installing gazebo:
+
+[Installing Gazebo with ROS — Gazebo ionic documentation](https://gazebosim.org/docs/latest/ros_installation/)
+
+Installing MAVROS:
+
+[Installing ROS — Dev  documentation](https://ardupilot.org/dev/docs/ros-install.html#installing-mavros)
+
+## 4. How to Run QGroundControl with SITL using ArduPilot
 1. Run SITL with MAVProxy:
 ```bash
 cd ardupilot/ArduCopter
@@ -44,7 +61,7 @@ working demo
 https://www.youtube.com/watch?v=09Z5kr5EHag
 
 
-## 4. ArduPilot + Gazebo + MAVROS (ROS 2) Quick Start
+## 5. ArduPilot + Gazebo + MAVROS (ROS 2) Quick Start
 This guide walks you through running ArduCopter (Iris) simulation in Gazebo, connecting with MAVROS (ROS 2), and sending basic commands.
 
 1. Run Gazebo
@@ -114,7 +131,7 @@ ros2 topic pub /mavros/setpoint_velocity/cmd_vel geometry_msgs/msg/TwistStamped 
 - Ensure all dependencies (Gazebo, ArduPilot, MAVROS, ROS 2) are installed and sourced.
 - Adjust file/model names as needed for your setup.
 
-## 5. Robot Vizualization using RViz
+## 6. Robot Vizualization using RViz
 
 This part contains the final component of the ROS2 drone simulation project focused on **robot visualization using RViz**. The goal of this module is to reflect the drone's movements in Gazebo within RViz by broadcasting pose data and publishing the robot model for visualization.
 
