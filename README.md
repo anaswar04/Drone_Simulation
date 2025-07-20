@@ -151,7 +151,7 @@ drone_ws/
 ```
 
 
-## Building the Workspace
+### Building the Workspace
 Open a terminal and run the following commands:
 
 ```bash
@@ -160,7 +160,7 @@ colcon build
 source ~/drone_ws/install/setup.bash
 ```
 
-###Launch the Drone
+### Launch the Drone
 Run the following command to launch the drone:
 
 ```bash
